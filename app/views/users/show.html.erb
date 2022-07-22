@@ -1,0 +1,80 @@
+<div class="main">
+  <div class="user-inner">
+    <div class="user-heading">
+      <h2 class="user-nickname">
+        <%= "ニックネーム：#{@user.nickname}"%>
+      </h2>
+      <p class="user-email">
+        <%= "Eメールアドレス：#{@user.email}" %>
+      </p>
+    </div>
+    <div class="user-form-main">
+      <% if current_user.admin?%>
+        <div class="food-form-main">
+          <h2 class="food-form-title">寿司ネタの情報を入力</h2>
+          <%= form_with model: @food, url: foods_path, local: true do |f| %>
+          <%#= render 'shared/error_messages', model: f.object %>
+          <ul>
+            <li class="form-list">
+              <div class="weight-bold-text">
+                寿司ネタ名称
+              </div>
+                <%= f.text_field :sushi_neta_name, placeholder: "（必須）" %>
+            </li>
+            <li class="form-list">
+              <div class="weight-bold-text">
+                寿司ネタ説明文
+              </div>
+              <%= f.text_area :explanation, placeholder: "（必須）" %>
+            </li>
+            <li class="form-list">
+              <div class="weight-bold-text">
+                寿司ネタ種類
+              </div>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+            </li>
+            <li class="form-list">
+              <div class="weight-bold-text">
+                寿司ネタ旬時期
+              </div>
+              <%= f.number_field :season_month, placeholder: "（必須）", in: 1..12 %>
+            </li>
+            <li class="form-list">
+              <div class="weight-bold-text">
+                寿司ネタ画像
+              </div>
+              <%= f.file_field :image %>
+            </li>
+            <li class="form-btn">
+              <%= f.submit "寿司ネタを投稿する" %>
+            </li>  
+          </ul>
+          <% end %>
+        </div>
+        <div class="information-form-main">
+          <h2 class="information-form-title">お知らせの情報を入力</h2>
+          <%= form_with model: @information, url: informations_path, local: true do |f| %>
+          <%#= render 'shared/error_messages', model: f.object %>
+          <ul>
+            <li class="form-list">
+              <div class="weight-bold-text">
+                お知らせ題名
+              </div>
+              <%= f.text_field :title, placeholder: "（必須）" %>
+            </li>
+            <li class="form-list">
+              <div class="weight-bold-text">
+                お知らせ内容
+              </div>
+              <%= f.text_area :content, placeholder: "（必須）" %>
+            </li>
+            <li class="form-btn">
+              <%= f.submit "お知らせを投稿する" %>
+            </li>
+          </ul>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+  </div>
+</div>

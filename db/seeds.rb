@@ -1,60 +1,32 @@
 Food.create!(
   [
     {
-      sushi_neta_name: '甘エビ',
-      explanation: 'テスト７',
-      category_id: 4,
+      sushi_neta_name: 'マグロ(赤身)',
+      explanation: 'テスト１',
+      category_id: 1,
       season_month: 1,
-      image: 'sushineta/amaebi.png'
+      image: 'sushineta/akamimaguro.png'
     },
     {
-      sushi_neta_name: '穴子',
-      explanation: 'テスト８',
-      category_id: 4,
-      season_month: 7,
+      sushi_neta_name: 'イカ',
+      explanation: 'テスト２',
+      category_id: 2,
+      season_month: 2,
       image: 'sushineta/anago.png'
     },
     {
-      sushi_neta_name: 'ビントロ',
-      explanation: 'テスト９',
-      category_id: 6,
-      season_month: 12,
+      sushi_neta_name: 'サーモン',
+      explanation: 'テスト３',
+      category_id: 2,
+      season_month: 3,
       image: 'sushineta/bintoro.png'
     },
     {
-      sushi_neta_name: 'エビ',
-      explanation: 'テスト１０',
-      category_id: 4,
-      season_month: 11,
-      image: 'sushineta/ebi.png'
-    },
-    {
-      sushi_neta_name: 'エビ天',
-      explanation: 'テスト１１',
-      category_id: 6,
-      season_month: 11,
-      image: 'sushineta/ebiten.png'
-    },
-    {
-      sushi_neta_name: 'ホッキ貝',
-      explanation: 'テスト１２',
-      category_id: 5,
-      season_month: 2,
-      image: 'sushineta/hokkigai.png'
-    },
-    {
-      sushi_neta_name: 'いなり寿司',
-      explanation: 'テスト１２',
-      category_id: 6,
-      season_month: 2,
-      image: 'sushineta/inarizushi.png'
-    },
-    {
-      sushi_neta_name: '数の子',
-      explanation: 'テスト１３',
-      category_id: 6,
+      sushi_neta_name: 'タイ',
+      explanation: 'テスト４',
+      category_id: 2,
       season_month: 4,
-      image: 'sushineta/kazunoko.png'
+      image: 'sushineta/ebi.png'
     }
   ]
 )

@@ -6,13 +6,13 @@
     <ul class='lists-left'>
       <li><%= link_to '寿司ネタ一覧', foods_path, class: "category-list" %></li>
       <li><%= link_to 'サービス一覧', services_path, class: "category-list" %></li>
-      <li><%= link_to 'お知らせ一覧', news_index_path, class: "category-list" %></li>
+      <li><%= link_to 'お知らせ一覧', informations_path, class: "category-list" %></li>
       <li><%= link_to 'ランキング', "#", class: "category-list" %></li>
       <li><%= link_to 'マップ', "#", class: "category-list" %></li>
     </ul>
     <ul class='lists-right'>
     <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, "#", class: "mypage" %></li>
+      <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "mypage" %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
     <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
