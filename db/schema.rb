@@ -53,23 +53,6 @@ ActiveRecord::Schema.define(version: 2022_07_23_143929) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "grade_foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "grade_id", null: false
-    t.bigint "food_id", null: false
-    t.integer "count", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["food_id"], name: "index_grade_foods_on_food_id"
-    t.index ["grade_id"], name: "index_grade_foods_on_grade_id"
-  end
-
-  create_table "grades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_grades_on_user_id"
-  end
-
   create_table "information", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.string "content", null: false
@@ -93,12 +76,11 @@ ActiveRecord::Schema.define(version: 2022_07_23_143929) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "foods"
   add_foreign_key "comments", "users"
-  add_foreign_key "grade_foods", "foods"
-  add_foreign_key "grade_foods", "grades"
-  add_foreign_key "grades", "users"
 end
