@@ -7,11 +7,12 @@ class InformationsController < ApplicationController
   end
 
   def create
-    @information = Information.create(information_params)
+    @information = Information.new(information_params)
     if @information.save
       redirect_to root_path
     else
-      render :new
+      @user = current_user
+      render template: "users/show"
     end
   end
 
@@ -20,4 +21,5 @@ class InformationsController < ApplicationController
     params.require(:information).permit(:title,
                   :content)
   end
+
 end

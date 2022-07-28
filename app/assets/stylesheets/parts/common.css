@@ -2,3 +2,16 @@
   margin: 10px;
   border: 1px solid
 }
+
+.container {
+  padding: 10px;
+}
+
+table, td, th{
+  border: 1px solid black;
+}
+
+.text-decoration {
+  text-decoration: none;
+ }
+

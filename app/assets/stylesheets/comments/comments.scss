@@ -1,0 +1,120 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.rating-content {
+ height: 150px;
+}
+
+.average-score {
+  display: flex;
+}
+
+.star-rating {
+  margin-left: 10%;
+}
+
+.average-score-display {
+  font-size: 16px;
+  margin: auto;
+}
+
+.star-rating {
+  position: relative;
+  line-height: 2em;
+  width: 5em;
+  height: 2em;
+  font-size: 36px;
+}
+
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ffcc33;
+}
+
+.star-rating-back {
+  color: #ccc;
+}
+
+.comment-select {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rating-box .ratings .fa {
+  font-size: 30px;
+  color: #fc0;
+  cursor: pointer;
+}
+
+.main-rating {
+  display: flex;
+}
+
+.rating-value-display {
+  font-size: 20px;
+}
+
+.card-header-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+table {
+  border-collapse: collapse; /*隣接する枠線を重ねて表示*/
+  border-spacing: 0; /*枠線を間隔をなしに*/
+  width: 100%;
+  text-align: center;
+ }
+
+ table th {
+  text-align: center;
+  font-weight: bold;
+  background: #e3f6f5;
+  border: solid 1px #666666;
+  padding: 10px;
+  width: 25%;
+ }
+
+ table td {
+  border: solid 1px #666666;
+  padding: 10px;
+  width: 25%;
+ }
+
+ .review-write {
+  font-size: 20px;
+  margin-bottom: 10px;
+ }
+
+ .comment-textarea {
+  width: 50%;
+  height: 150px;
+  margin-top: 10px;
+  display: block;
+ }
+
+ .comment-btn {
+  width: 260px;
+  height: 30px;
+  line-height: 0px;
+  margin: 15px 30px 0 0;
+  padding: 30px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0099ff;
+  border-color: #0077dd;
+  border-radius: 20px;
+  box-shadow:
+    4px 4px 6px #cceeff inset, /* 内側左上ハイライト */
+    -4px -4px 6px #0077dd inset, /* 内側右下シャドー */
+    -2px -2px 3px #cceeff, /* 外側左上ぼかし */
+    2px 2px 3px #66ccff; /* 外側右下ぼかし */
+  background-image: none;
+  cursor: pointer;
+ }
+

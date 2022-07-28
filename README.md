@@ -139,20 +139,7 @@ SUSHI COMP MASTER
 | user    | references | null: false, foreign_key: true |
 | food    | references | null: false, foreign_key: true |
 | content | string     | null: false                    |
-
-
-### Association
-- belongs_to :user
-- belongs_to :food
-<br><br>
-
-## starsテーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
-| food    | references | null: false, foreign_key: true |
-| star    | integer    | null: false                    |
+| rate    | integer    | null: false, default: 0        |
 
 
 ### Association

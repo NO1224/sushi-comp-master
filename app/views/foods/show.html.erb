@@ -28,8 +28,22 @@
         </div>
       </div>
       <div class="food-detail-image">
-      <%= image_tag "#{@food.image}" %>
-      </div>
+        <%= image_tag @food.image %>
+          <div class="rating-content">
+            <div class="average-score">
+              <div class="star-rating">
+                <div class="star-rating-front" style="width: <%= @food.comment_rate_percentage %>%">★★★★★</div>
+                <div class="star-rating-back">★★★★★</div>
+              </div>
+              <div class="average-score-display">
+                平均<%=  @food.avg_score %>点（<%= @food.comments.count %>件のレビュー）
+              </div>
+            </div>
+            <div class="comment-select">
+              <%= link_to "評価一覧を見る", food_comments_path(@food), class: "text-decoration" %>
+              <%= link_to "評価する", new_food_comment_path(@food), class: "text-decoration" %>
+            </div>
+          </div>
     </div>
   </div>
   <div class="food-footer">

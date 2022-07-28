@@ -5,7 +5,6 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.text    :explanation,     null: false
       t.integer :category_id,     null: false
       t.integer :season_month,    null: false
-      t.string  :image,           null: false
       t.timestamps
     end
   end

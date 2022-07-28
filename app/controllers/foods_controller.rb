@@ -5,7 +5,6 @@ class FoodsController < ApplicationController
   end
 
   def new
-    @food = Food.new
   end
 
   def create
@@ -13,20 +12,22 @@ class FoodsController < ApplicationController
     if @food.save
       redirect_to root_path
     else
-      render :new
+      @user = current_user
+      render template: "users/show"
     end
   end
 
   def show
     @food = Food.find(params[:id])
+    @comment = Comment.new
   end
 
   private
   def food_params
     params.require(:food).permit(:sushi_neta_name,
-                                 :explanation,
-                                 :category_id,
-                                 :season_month,
-                                 :image)
+                  :explanation,
+                  :category_id,
+                  :season_month,
+                  :image)
   end
 end
