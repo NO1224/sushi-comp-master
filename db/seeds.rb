@@ -1,9 +1,9 @@
 User.create!(
   [
     {
-      nickname: 'admin2',
-      email: 'admin2@admin2',
-      password: 'admin222',
+      nickname: 'admin',
+      email: 'admin@admin',
+      password: 'admin111',
       admin: 1,
     }
   ]
