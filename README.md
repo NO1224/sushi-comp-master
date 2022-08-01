@@ -5,6 +5,7 @@ SUSHI COMP MASTER
 寿司ネタを飲食した数や種類に応じたサービスが受けられ、ユーザー同士でコメントと評価をすることで、消費の少ない寿司ネタを手に取る機会を増やすことができる
 
 # URL
+https://sushi-comp-master.herokuapp.com/
 
 # テスト用アカウント
 - Basic認証ID：admin
