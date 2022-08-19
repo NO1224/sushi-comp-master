@@ -33,16 +33,46 @@
 
 .pickup {
   height: 400px;
-  background-color: rgba(200,255,255,0.5)
+  background-color: rgba(200,255,255,0.5);
 }
 
 .news {
   height: 300px;
-  background-color: rgba(240,226,204,0.3)
+  background-color: rgba(240,226,204,0.3);
+}
+
+.news-logo {
+  font-size:3em;
+	line-height:0.95em;
+	font-weight:bold;
+	color: #A5D6A7;
+	text-shadow:
+		1px -1px 1px #BDBDBD,
+		-1px 2px 1px #737272,
+		-2px 4px 1px #767474,
+		-3px 6px 1px #787777,
+		-4px 8px 1px #424242,
+		-5px 10px 1px #616161,
+		-6px 12px 1px #757575,
+		-7px 14px 1px #9E9E9E,
+		-8px 16px 1px #BDBDBD,
+		-9px 18px 1px #E0E0E0;
+  padding: 10px 0 10px 10px;
+}
+
+.topics {
+  text-decoration: none;
+}
+
+.topic {
+  margin-bottom: 10px;
+  border-bottom:dotted;/*下線を点線にする*/
+  border-color:#000000;
+  border-width:1px;
 }
 
 .home-right-content {
   width: 20%;
   height: 700px;
-  background-color: rgba(187,149,117,0.2)
+  background-color: rgba(187,149,117,0.2);
 }

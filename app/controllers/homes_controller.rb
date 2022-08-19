@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   def index
+    @informations = Information.limit(5).order("created_at DESC")
     #@informations = Information.all
     #if params[:year_month]
     #  @yearmonth = params[:year_month]

@@ -13,7 +13,18 @@
         ピックアップ機能表示予定
       </div>
       <div class="news">
-        ニュース一覧表示予定
+        <h1 class="news-logo">NEWS</h1>
+        <div class="container">
+        <% @informations.each do |news| %>
+          <%= link_to(informations_path, class: 'topics') do %>
+          <article class="topic">
+            <%= news.title %>:
+            <%= truncate(news.content, omision: "...", length: 30,) %>
+            <%= news.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+          </article>
+          <% end %>
+        <% end %>
+        </div>
       </div>
     </div>
     <div class="home-right-content">
