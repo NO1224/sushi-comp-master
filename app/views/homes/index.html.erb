@@ -29,7 +29,14 @@
     </div>
     <div class="home-right-content">
       <div class="archive">
-        アーカイブ表示予定
+        <h1 class="archive-logo">過去ログ</h1>
+        <div class="container">
+          <ul>
+            <% @archives.each do |yyyymm, cnt| %>
+              <li><%= ymconv(yyyymm[0], yyyymm[1], cnt) %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

@@ -5,8 +5,13 @@ class Information < ApplicationRecord
     validates :content
   end
 
-  #def divide_monthly
-  #  return Information.group("strftime('%Y%m', informations.created_at)")
-  #                      .order(Arel.sql("strftime('%Y%m', informations.created_at) desc")).count
-  #end
+  def self.divide_monthly
+    unless Information.blank?
+      return Information.group("YEAR(created_at)").group("MONTH(created_at)").count
+    else
+      return ""
+    end
+  end
+
+  
 end
