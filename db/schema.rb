@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_23_143929) do
+ActiveRecord::Schema.define(version: 2022_08_22_085719) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 2022_07_23_143929) do
     t.string "sushi_neta_name", null: false
     t.text "explanation", null: false
     t.integer "category_id", null: false
-    t.integer "season_month", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -58,6 +57,14 @@ ActiveRecord::Schema.define(version: 2022_07_23_143929) do
     t.string "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "inseasons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "food_id", null: false
+    t.integer "season_month", null: false
+    t.index ["food_id"], name: "index_inseasons_on_food_id"
   end
 
   create_table "services", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -83,4 +90,5 @@ ActiveRecord::Schema.define(version: 2022_07_23_143929) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "foods"
   add_foreign_key "comments", "users"
+  add_foreign_key "inseasons", "foods"
 end
