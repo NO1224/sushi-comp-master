@@ -1,6 +1,7 @@
 class Food < ApplicationRecord
   has_one_attached :image
-  has_many :inseason
+  has_many :inseasons, dependent: :destroy
+  accepts_nested_attributes_for :inseasons
   belongs_to :user, optional: true
   has_many :comments, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
