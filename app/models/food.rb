@@ -6,6 +6,7 @@ class Food < ApplicationRecord
   has_many :comments, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
+  belongs_to_active_hash :season
 
   with_options presence: true do
     validates :sushi_neta_name

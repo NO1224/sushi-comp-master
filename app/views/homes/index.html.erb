@@ -33,7 +33,11 @@
         <div class="container">
           <ul>
             <% @archives.each do |yyyymm, cnt| %>
-              <li><%= ymconv(yyyymm[0], yyyymm[1], cnt) %></li>
+              <% unless @archives.blank? %>
+                <li><%= ymconv(yyyymm[0], yyyymm[1], cnt) %></li>
+              <% else %>  
+                <% next %>
+              <% end %>
             <% end %>
           </ul>
         </div>
