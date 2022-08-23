@@ -1,17 +1,21 @@
+/*全画面用表示領域プロパティ*/
 .main {
   margin: 10px;
   border: 1px solid
 }
 
+/*内部画面用表示領域プロパティ*/
 .container {
   padding: 10px;
 }
 
+/*寿司ネタ評価一覧用テーブルプロパティ*/
 table, td, th{
   border: 1px solid black;
 }
 
-.text-decoration {
+/*リンク下線部共通*/
+a {
   text-decoration: none;
  }
 

@@ -1,9 +1,12 @@
+/*要素の幅と高さに「paddingとborderを含める*/
 * {
   box-sizing: border-box;
 }
 
+/*ヘッダー要素*/
 .top-page-header {
   width: 100%;
+  height: 80px;
   display: flex;
   background-color: antiquewhite;
 }
@@ -12,63 +15,38 @@
   padding-left: 2vw;
 }
 
-
 .sushi-comp-icon {
-  display: block;
-  text-decoration: none;
   width: 10vw;
-  margin-right: 20vw;
-  color: #333333;
-  font-size: 24px;
+  margin-right: 10vw;
 }
 
-.nav {
+/*ヘッダーナビ要素*/
+.navbar {
+  width: 100%;
+  height: 100%;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
 }
 
-.lists-left {
+.navbar-inner {
   display: flex;
-  min-width: 200px;
+  min-width: 100px;
   align-items: center;
 }
 
-.category-list {
-  text-decoration: none;
+.navbar-inner a {
   margin-right: 3vw;
   color: #333333;
+  display: block;
+  height: 100%;
 }
 
-.lists-right {
-  display: flex;
-  list-style: none;
-  padding-right: 2vw;
-  align-items: flex-end;
+.navbar-inner a:hover {
+  background:  #ff1787;
+  color: #fff;
 }
 
-.mypage {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.logout {
-  text-decoration: none;
-  color: #333333;
-}
-
-.login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.sign-up {
-  text-decoration: none;
-  color: #333333;
+.account {
+  margin-left: 10vw;
 }

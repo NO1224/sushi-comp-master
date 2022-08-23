@@ -37,6 +37,7 @@
               <div class="weight-bold-text">
                 寿司ネタ旬時期
               </div>
+              <%#未完成#%>
               <%= f.fields_for :inseasons do |inseason| %>
                 <%= inseason.collection_check_boxes(:season_month, Season.all, :id, :name) do |season| %>
                   <%= season.check_box %>
