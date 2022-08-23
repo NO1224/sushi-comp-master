@@ -1,5 +1,7 @@
 <div class="main">
+  <%#ヘッダー領域%>
   <%= render "parts/first-header" %>
+  <%#ページ名領域%>
   <div class="second-header-food-wrapper">
     <div class="second-header-translucent">
       <div class="title-box">
@@ -9,6 +11,7 @@
       </div>
     </div>
   </div>
+  <%#寿司ネタ詳細領域%>
   <div class="food-second-main">
     <div class="food-name">
       <%= @food.sushi_neta_name %>
@@ -29,6 +32,7 @@
       </div>
       <div class="food-detail-image">
         <%= image_tag @food.image %>
+          <%#寿司ネタ評価領域%>
           <div class="rating-content">
             <div class="average-score">
               <div class="star-rating">
@@ -46,6 +50,7 @@
           </div>
     </div>
   </div>
+  <%#戻るボタン(フッター)領域%>
   <div class="food-footer">
     <div class="return-btn-box">
     <%= link_to "戻る", foods_path, class: "return-btn" %>
