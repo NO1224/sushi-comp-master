@@ -1,5 +1,7 @@
 <div class="main">
+  <%#ヘッダー領域%>
   <%= render "parts/first-header" %>
+  <%#ページ名領域%>
   <div class="second-header-food-wrapper">
     <div class="second-header-translucent">
       <div class="title-box">
@@ -9,6 +11,7 @@
       </div>
     </div>
   </div>
+  <%#寿司ネタ一覧領域%>
   <div class="food-main">
   <% @foods.each do |food|%>
     <div class="foods-frame">
@@ -26,6 +29,7 @@
     </div>
   <% end %>
   </div>
+  <%#戻るボタン領域%>
   <div class="food-footer">
     <div class="return-btn-box">
     <%= link_to "戻る", "/", class: "return-btn" %>
