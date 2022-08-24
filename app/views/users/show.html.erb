@@ -1,4 +1,5 @@
 <div class="main">
+  <%#ユーザー情報領域%>
   <div class="user-inner">
     <div class="user-heading">
       <h2 class="user-nickname">
@@ -8,8 +9,10 @@
         <%= "Eメールアドレス：#{@user.email}" %>
       </p>
     </div>
+    <%#管理者専用領域%>
     <div class="user-form-main">
       <% if current_user.admin?%>
+        <%#寿司ネタ情報追加フォーム領域%>
         <div class="food-form-main">
           <h2 class="food-form-title">寿司ネタの情報を入力</h2>
           <%= form_with model: @food, url: foods_path, local: true do |f| %>
@@ -58,6 +61,7 @@
           </ul>
           <% end %>
         </div>
+        <%#お知らせ情報追加フォーム領域%>
         <div class="information-form-main">
           <h2 class="information-form-title">お知らせの情報を入力</h2>
           <%= form_with model: @information, url: informations_path, local: true do |f| %>

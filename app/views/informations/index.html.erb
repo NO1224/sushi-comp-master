@@ -1,5 +1,7 @@
 <div class="main">
+  <%#ヘッダー領域%>
   <%= render "parts/first-header" %>
+  <%#ページ名領域%>
   <div class="second-header-news-wrapper">
     <div class="second-header-translucent">
       <div class="title-box">
@@ -10,6 +12,7 @@
     </div>
   </div>
   <div class="news-wrapper">
+      <%#お知らせ内容領域%>
       <div class="news-left-content">
         <% @informations.each do |news|%>
         <div class="news-main">
@@ -25,6 +28,7 @@
         </div>
         <% end %>
       </div>
+    <%#過去ログ領域%>
     <div class="news-right-content">
       <div class="archive">
         アーカイブ表示予定

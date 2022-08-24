@@ -11,6 +11,7 @@
     </ul>
   </div>
 <% end %>
+    <%#星評価決定領域%>
     <div class="rating-box">
       <%= form_with model: @comment, url: food_comments_path(@food.id), local: true do |f| %>
         <div class="main-rating">
@@ -30,6 +31,7 @@
         <%= link_to "他のレビューを見る", food_comments_path(@food), class: "text-decoration" %>
       <% end %>
     </div>
+    <%#戻るボタン(フッター)領域%>
     <div class="food-footer">
       <div class="return-btn-box">
       <%= link_to "戻る", food_path(@food), class: "return-btn" %>
