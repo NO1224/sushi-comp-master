@@ -1,3 +1,4 @@
+/*ページ名領域*/
 .second-header-food-wrapper {
   width: 100%;
   height: 120px;
@@ -29,6 +30,7 @@
  font-weight: bold;
 }
 
+/*寿司ネタ一覧領域*/
 .food-main {
   width: 100%;
   height: 90vh;
@@ -38,14 +40,6 @@
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
-}
-
-.food-second-main {
-  width: 100%;
-  height: 90vh;
-  padding: 20px;
-  border: thick double gray;
-  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .foods-frame {
@@ -78,25 +72,13 @@
   padding: 5px 0;
 }
 
-.food-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.return-btn-box {
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: rgba(133, 215, 74, 0.8);
-  border-radius: 12px;
-  margin: 20px 0;
-}
-
-.return-btn {
-  text-decoration: none;
-  color: #333333;
+/*寿司ネタ詳細領域*/
+.food-second-main {
+  width: 100%;
+  height: 90vh;
+  padding: 20px;
+  border: thick double gray;
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .food-name {
@@ -157,3 +139,28 @@
   width: 100%;
   height: 100%;
 }
+
+.food-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.return-btn-box {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: rgba(133, 215, 74, 0.8);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.return-btn {
+  text-decoration: none;
+  color: #333333;
+}
+
+
+
+
