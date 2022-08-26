@@ -28,6 +28,29 @@
  font-weight: bold;
 }
 
+/*戻るボタン[フッター]領域(共通)*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 12px;
+  margin: 20px 0;
+  text-align: center;
+  background: rgba(133, 215, 74, 0.8);
+  
+}
+
+.return {
+  text-decoration: none;
+  color: #333333;
+}
+
 /*内部画面用表示領域プロパティ*/
 .container {
   padding: 10px;
