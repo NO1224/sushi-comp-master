@@ -1,3 +1,4 @@
+/*ページ名領域(背景)*/
 .second-header-news-wrapper {
   width: 100%;
   height: 120px;
@@ -6,12 +7,14 @@
   background-repeat: no-repeat;
 }
 
+/*お知らせ内容領域*/
 .news-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
+/**お知らせ本文領域**/
 .news-left-content {
   width: 80%;
 }
@@ -44,6 +47,7 @@
   border-bottom: 2px dashed gray;
 }
 
+/**お知らせ過去ログ領域**/
 .news-right-content {
   width: 20%;
   height: 60%;
