@@ -3,7 +3,7 @@
     <div class="card">
       <h1 class="review-write">レビューを書く</h1>
       <% if @comment.errors.any? %>
-        <div class="notification is-danger">
+        <div class="notification">
           <h2><%= @comment.errors.count %>件のエラーがあります。</h2>
           <ul>
             <% @comment.errors.full_messages.each do |message| %>
@@ -16,23 +16,27 @@
       <div class="rating-box">
         <%= form_with model: @comment, url: food_comments_path(@food.id), local: true do |f| %>
           <%##星評価決定領域%>
-          <div class="main-rating">
-            <div class="ratings">
-              <%##星描写はスタイルシート使用%>
-              <span class="fa fa-star-o" id="star"></span>
-              <span class="fa fa-star-o" id="star"></span>
-              <span class="fa fa-star-o" id="star"></span>
-              <span class="fa fa-star-o" id="star"></span>
-              <span class="fa fa-star-o" id="star"></span>
+          <div class="example">
+            <div class="main-rating">
+              <div class="ratings">
+                <%##星描写はスタイルシート使用%>
+                <span class="fa fa-star-o" id="star"></span>
+                <span class="fa fa-star-o" id="star"></span>
+                <span class="fa fa-star-o" id="star"></span>
+                <span class="fa fa-star-o" id="star"></span>
+                <span class="fa fa-star-o" id="star"></span>
+              </div>
+              <div class="rating-value-display"><span id="rating-value-display">0</span>/5</div>
             </div>
-            <div class="rating-value-display"><span id="rating-value-display">0</span>/5</div>
+            <%##コメント入力領域%>
+            <%= f.hidden_field :food_id, value: @food.id %>
+            <%= f.hidden_field :rate, id: "rating-value" %>
+            <%= f.text_area :content, class: "comment-textarea" %>
           </div>
-          <%##コメント入力領域%>
-          <%= f.hidden_field :food_id, value: @food.id %>
-          <%= f.hidden_field :rate, id: "rating-value" %>
-          <%= f.text_area :content, class: "comment-textarea" %>
           <%= f.submit "コメント", class: "comment-btn" %>
-          <%= link_to "他のレビューを見る", food_comments_path(@food), class: "text-decoration" %>
+          <div class="container">
+            <%= link_to "他のレビューを見る", food_comments_path(@food), class: "text-decoration" %>
+          </div>
         <% end %>
       </div>
       <%#戻るボタン(フッター)領域%>

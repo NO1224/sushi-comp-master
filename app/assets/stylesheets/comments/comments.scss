@@ -3,6 +3,11 @@
  height: 150px;
 }
 
+/*エラー表示領域*/
+.notification {
+  color: red;
+}
+
 /*星評価共通*/
 .average-score {
   display: flex;
@@ -39,8 +44,13 @@
   color: #ccc;
 }
 
+.example {
+  padding-left: 35%;
+}
+
 .main-rating {
   display: flex;
+  padding-left: 100px;
 }
 
 /*星描写共通*/
@@ -85,6 +95,10 @@
  }
 
  /*特定寿司ネタ評価入力領域*/
+ .card {
+   text-align: center;
+ }
+
  .review-write {
   font-size: 20px;
   margin-bottom: 10px;
