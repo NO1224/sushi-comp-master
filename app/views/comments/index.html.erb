@@ -1,45 +1,43 @@
 <div class="main">
   <div class="container">
-        <%#寿司ネタ評価領域%>
-        <div class="card mb-6">
-          <header class="card-header">
-            <p class="card-header-title">
-              <%= @food.sushi_neta_name %>
-            </p>
-          </header>
-          <div class="card-content">
-            <div class="content average-score">
-              <div class="star-rating">
-                <div class="star-rating-front" style="width: <%= @food.comment_rate_percentage %>%">★★★★★</div>
-                <div class="star-rating-back">★★★★★</div>
-              </div>
-              <div class="average-score-display">
-                平均<%= @food.avg_score %>点（<%= @food.comments.count %>件のレビュー）
-              </div>
-            </div>
-          </div>
-        </div>
-        <table class="table is-fullwidth has-text-centered">
-          <thead>
-            <tr>
-              <th>ユーザー</th><th>点数</th><th>内容</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @comments.each do |comment| %>
-              <tr>
-                <td><%= comment.user.nickname %></td>
-                <td><%= comment.rate %></td>
-                <td><%= comment.content %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-        <%#戻るボタン(フッター)領域%>
-        <div class="footer">
-          <div class="btn">
-          <%= link_to "戻る", food_path(@food), class: "return" %>
-          </div>
-        </div>
+   <%#寿司ネタ評価領域%>
+   <header class="card-header">
+     <p class="card-header-title">
+       <%= @food.sushi_neta_name %>
+     </p>
+   </header>
+   <div class="card-content">
+     <div class="average-score">
+       <div class="star-rating">
+         <div class="star-rating-front" style="width: <%= @food.comment_rate_percentage %>%">★★★★★</div>
+         <div class="star-rating-back">★★★★★</div>
+       </div>
+       <div class="average-score-display">
+         平均<%= @food.avg_score %>点（<%= @food.comments.count %>件のレビュー）
+       </div>
+     </div>
+   </div>
+   <table class="table is-fullwidth has-text-centered">
+     <thead>
+       <tr>
+         <th>ユーザー</th><th>点数</th><th>内容</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @comments.each do |comment| %>
+          <tr>
+           <td><%= comment.user.nickname %></td>
+           <td><%= comment.rate %></td>
+           <td><%= comment.content %></td>
+         </tr>
+       <% end %>
+     </tbody>
+   </table>
+   <%#戻るボタン(フッター)領域%>
+   <div class="footer">
+     <div class="btn">
+       <%= link_to "戻る", food_path(@food), class: "return" %>
+     </div>
+   </div>
   </div>
 </div>

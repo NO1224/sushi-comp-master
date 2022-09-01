@@ -1,44 +1,47 @@
 <div class="main">
   <div class="container">
-    <h1 class="review-write">レビューを書く</h1>
-    <% if @comment.errors.any? %>
-  <div class="notification is-danger">
-    <h2><%= @comment.errors.count %>件のエラーがあります。</h2>
-    <ul>
-      <% @comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-    <%#評価領域%>
-    <div class="rating-box">
-      <%= form_with model: @comment, url: food_comments_path(@food.id), local: true do |f| %>
-        <%##星評価決定領域%>
-        <div class="main-rating">
-          <div class="ratings">
-            <span class="fa fa-star-o" id="star"></span>
-            <span class="fa fa-star-o" id="star"></span>
-            <span class="fa fa-star-o" id="star"></span>
-            <span class="fa fa-star-o" id="star"></span>
-            <span class="fa fa-star-o" id="star"></span>
-          </div>
-          <div class="rating-value-display"><span id="rating-value-display">0</span>/5</div>
+    <div class="card">
+      <h1 class="review-write">レビューを書く</h1>
+      <% if @comment.errors.any? %>
+        <div class="notification is-danger">
+          <h2><%= @comment.errors.count %>件のエラーがあります。</h2>
+          <ul>
+            <% @comment.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
         </div>
-        <%##コメント入力領域%>
-        <%= f.hidden_field :food_id, value: @food.id %>
-        <%= f.hidden_field :rate, id: "rating-value" %>
-        <%= f.text_area :content, class: "comment-textarea" %>
-        <%= f.submit "コメント", class: "comment-btn" %>
-        <%= link_to "他のレビューを見る", food_comments_path(@food), class: "text-decoration" %>
       <% end %>
-    </div>
-    <%#戻るボタン(フッター)領域%>
-    <div class="footer">
-      <div class="btn">
-        <%= link_to "戻る", food_path(@food), class: "return" %>
+      <%#評価領域%>
+      <div class="rating-box">
+        <%= form_with model: @comment, url: food_comments_path(@food.id), local: true do |f| %>
+          <%##星評価決定領域%>
+          <div class="main-rating">
+            <div class="ratings">
+              <%##星描写はスタイルシート使用%>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
+            </div>
+            <div class="rating-value-display"><span id="rating-value-display">0</span>/5</div>
+          </div>
+          <%##コメント入力領域%>
+          <%= f.hidden_field :food_id, value: @food.id %>
+          <%= f.hidden_field :rate, id: "rating-value" %>
+          <%= f.text_area :content, class: "comment-textarea" %>
+          <%= f.submit "コメント", class: "comment-btn" %>
+          <%= link_to "他のレビューを見る", food_comments_path(@food), class: "text-decoration" %>
+        <% end %>
       </div>
-    </div>
+      <%#戻るボタン(フッター)領域%>
+      <div class="footer">
+        <div class="btn">
+          <%= link_to "戻る", food_path(@food), class: "return" %>
+        </div>
+      </div>
+    </div>  
   </div>
 </div>
 

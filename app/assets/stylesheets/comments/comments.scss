@@ -1,11 +1,9 @@
-// Place all the styles related to the comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
+/*寿司ネタ評価領域*/
 .rating-content {
  height: 150px;
 }
 
+/*星評価共通*/
 .average-score {
   display: flex;
 }
@@ -27,6 +25,7 @@
   font-size: 36px;
 }
 
+/*星評価の数値抽象表現(土台を上書き)*/
 .star-rating-front {
   position: absolute;
   top: 0;
@@ -35,42 +34,42 @@
   color: #ffcc33;
 }
 
+/*星評価の土台*/
 .star-rating-back {
   color: #ccc;
-}
-
-.comment-select {
-  display: flex;
-  justify-content: space-around;
-}
-
-.rating-box .ratings .fa {
-  font-size: 30px;
-  color: #fc0;
-  cursor: pointer;
 }
 
 .main-rating {
   display: flex;
 }
 
+/*星描写共通*/
+.rating-box .ratings .fa {
+  font-size: 30px;
+  color: #fc0;
+  cursor: pointer;
+}
+
+/*星評価の暫定値(ユーザー操作時に数値変更可)*/
 .rating-value-display {
   font-size: 20px;
 }
 
+/*特定寿司ネタ評価一覧*/
 .card-header-title {
   font-weight: bold;
   font-size: 24px;
 }
 
-table {
+/*特定寿司ネタ評価一覧テーブル領域*/
+.table {
   border-collapse: collapse; /*隣接する枠線を重ねて表示*/
   border-spacing: 0; /*枠線を間隔をなしに*/
   width: 100%;
   text-align: center;
  }
 
- table th {
+ .table th {
   text-align: center;
   font-weight: bold;
   background: #e3f6f5;
@@ -79,12 +78,13 @@ table {
   width: 25%;
  }
 
- table td {
+ .table td {
   border: solid 1px #666666;
   padding: 10px;
   width: 25%;
  }
 
+ /*特定寿司ネタ評価入力領域*/
  .review-write {
   font-size: 20px;
   margin-bottom: 10px;
