@@ -14,6 +14,7 @@ class Food < ApplicationRecord
     validates :image
   end
 
+  #星評価の平均
   def avg_score
     unless self.comments.empty?
       comments.average(:rate).round(1).to_f
@@ -22,9 +23,10 @@ class Food < ApplicationRecord
     end
   end
 
+  #星評価のパーセント換算(星のdiv領域に色を付ける割合)
   def comment_rate_percentage
     unless self.comments.empty?
-      comments.average(:rate).round(1).to_f*100/5
+      comments.average(:rate).round(1).to_f * 100 / 5
     else
       0.0
     end
