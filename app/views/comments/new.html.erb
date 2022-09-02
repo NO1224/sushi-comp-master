@@ -2,6 +2,7 @@
   <div class="container">
     <div class="card">
       <h1 class="review-write">レビューを書く</h1>
+      <%#エラー表示領域領域%>
       <% if @comment.errors.any? %>
         <div class="notification">
           <h2><%= @comment.errors.count %>件のエラーがあります。</h2>
