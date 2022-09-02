@@ -1,4 +1,5 @@
 class Season < ActiveHash::Base
+  #寿司ネタの旬用ハッシュデータ(配列)
   self.data = [
     { id: 1, name: '1月' },
     { id: 2, name: '2月' },

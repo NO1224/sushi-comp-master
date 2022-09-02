@@ -1,4 +1,5 @@
 class ServiceContent < ActiveHash::Base
+  #条件達成時のサービス用ハッシュデータ(配列)
   self.data = [
     { id: 1, condition: 'カウント数100皿達成', service: 'お好きな寿司ネタを一皿無料', category: 1},
     { id: 2, condition: 'カウント数300皿達成', service: 'お好きなソフトドリンクを一つ無料', category: 1},
