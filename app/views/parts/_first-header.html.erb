@@ -8,8 +8,8 @@
       <li><%= link_to '寿司ネタ一覧', foods_path %></li>
       <li><%= link_to 'サービス一覧', services_path %></li>
       <li><%= link_to 'お知らせ一覧', informations_path %></li>
-      <li><%= link_to 'ランキング', "ranks/index" %></li>
-      <li><%= link_to 'マップ', 'maps/top' %></li>
+      <li><%= link_to 'ランキング', ranks_index_path %></li>
+      <li><%= link_to 'マップ', maps_top_path %></li>
       <div class="navbar-inner account">
         <% if user_signed_in? %>
           <li><%= link_to current_user.nickname, "/users/#{current_user.id}" %></li>
