@@ -1,0 +1,29 @@
+/*ページ名領域*/
+.second-header-ranking-wrapper {
+  width: 100%;
+  height: 120px;
+  background-image: url(second-ranking-header.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/*ランキング内容領域*/
+.ranking-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+/**ランキング分類ボタン**/
+.ranking-condition-menu {
+  width: 30%;
+  padding: 30px;
+  background-color: rgba(187, 149, 118, 0.2);
+}
+
+/**ランキング内容表示領域**/
+.ranking-content-display {
+  width: 70%;
+  background-color: #FFF;
+  padding: 50px;
+}

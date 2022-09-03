@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'maps/top' => 'maps#top'
+  get 'ranks/index' => 'ranks#index'
   root to: 'homes#index'
   devise_for :users
   resources :users, only: :show
