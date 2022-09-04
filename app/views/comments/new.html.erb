@@ -17,21 +17,21 @@
       <div class="rating-box">
         <%= form_with model: @comment, url: food_comments_path(@food.id), local: true do |f| %>
           <%##星評価決定領域%>
-          <div class="example">
-            <div class="main-rating">
-              <div class="ratings">
-                <%##星描写はスタイルシート使用%>
-                <span class="fa fa-star-o" id="star"></span>
-                <span class="fa fa-star-o" id="star"></span>
-                <span class="fa fa-star-o" id="star"></span>
-                <span class="fa fa-star-o" id="star"></span>
-                <span class="fa fa-star-o" id="star"></span>
-              </div>
-              <div class="rating-value-display"><span id="rating-value-display">0</span>/5</div>
+          <div class="main-rating">
+            <div class="ratings">
+              <%##星描写はスタイルシート使用%>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
+              <span class="fa fa-star-o" id="star"></span>
             </div>
-            <%##コメント入力領域%>
-            <%= f.hidden_field :food_id, value: @food.id %>
-            <%= f.hidden_field :rate, id: "rating-value" %>
+            <div class="rating-value-display"><span id="rating-value-display">0</span>/5</div>
+          </div>
+          <%##コメント入力領域%>
+          <%= f.hidden_field :food_id, value: @food.id %>
+          <%= f.hidden_field :rate, id: "rating-value" %>
+          <div class="textarea">
             <%= f.text_area :content, class: "comment-textarea" %>
           </div>
           <%= f.submit "コメント", class: "comment-btn" %>
