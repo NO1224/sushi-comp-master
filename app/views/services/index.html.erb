@@ -24,15 +24,17 @@
       </div>
     </div>
     <%#サービス内容領域%>
-    <div class="service-content-display">
-    <% @services.each do |service|%>
-      <div class="service-contents">
-        <span class="material-symbols-outlined">block</span>
-        <%= service.condition %>
-        <span>：</span>
-        <%= service.service%>
-      </div>
-    <% end %>
+    <div id="service-content-display">
+      <% @services.each do |service|%>
+        <div class="service-contents">
+          <span class="material-symbols-outlined">block</span>
+          <input class="service-condition" name="service-condition" type="hidden" value=<% service.condition %>>
+          <%= service.condition %>
+          <span>：</span>
+          <input class="service-service" name="service-service" type="hidden" value=<% service.service %>>
+          <%= service.service%>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
