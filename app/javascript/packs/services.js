@@ -1,7 +1,7 @@
 // 全ボタン要素を取得
 const buttons = document.querySelectorAll('#button');
 // id = "service-content-display"の要素を取得
-const serviceContentDisplay = document.getElementsById("#service-content-display");
+const serviceContentDisplay = document.getElementById("#service-content-display");
 // 表示したいHTML要素を作成(innerHTML)
 
 
