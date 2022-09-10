@@ -14,7 +14,5 @@ for(let i = 0; i < buttons.length; i++) {
 // ハッシュデータに応じた表示（category:）
 function contentSwitch(i) {
   alert('id名「' + i + '」のボタンを押しました。');
-  if (i == 0){}
-  else if (i == 1){}
-  else{}
+  return i;
 };

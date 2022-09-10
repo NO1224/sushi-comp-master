@@ -26,8 +26,8 @@
     <%#サービス内容領域%>
     <div id="service-content-display">
       <% @services.each do |service|%>
+        <% if service.category == 2%> <%#javacsriptで切り替える部分%>
         <div class="service-contents">
-          if service
           <span class="material-symbols-outlined">block</span>
           <input class="service-condition" name="service-condition" type="hidden" value=<% service.condition %>>
           <%= service.condition %>
@@ -35,6 +35,7 @@
           <input class="service-service" name="service-service" type="hidden" value=<% service.service %>>
           <%= service.service%>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>
