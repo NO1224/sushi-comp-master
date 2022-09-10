@@ -27,6 +27,7 @@
     <div id="service-content-display">
       <% @services.each do |service|%>
         <div class="service-contents">
+          if service
           <span class="material-symbols-outlined">block</span>
           <input class="service-condition" name="service-condition" type="hidden" value=<% service.condition %>>
           <%= service.condition %>
