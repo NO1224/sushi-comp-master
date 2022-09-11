@@ -24,7 +24,7 @@
       </div>
     </div>
     <script>
-      let switch = 1 || 2;
+      let change= 1 || 2;
       const buttons = document.querySelectorAll('#button');
       for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(){contentSwitch(i)})
@@ -33,6 +33,7 @@
         alert('id名「' + i + '」のボタンを押しました。');
         return i;
       }
+      change = contentSwitch(i);
     </script>
     <%#サービス内容領域%>
     <div id="service-content-display">
