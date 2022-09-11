@@ -23,10 +23,21 @@
         種類達成条件一覧
       </div>
     </div>
+    <script>
+      let switch = 1 || 2;
+      const buttons = document.querySelectorAll('#button');
+      for(let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(){contentSwitch(i)})
+      }
+      function contentSwitch(i) {
+        alert('id名「' + i + '」のボタンを押しました。');
+        return i;
+      }
+    </script>
     <%#サービス内容領域%>
     <div id="service-content-display">
       <% @services.each do |service|%>
-        <% if service.category == 2%> <%#javacsriptで切り替える部分%>
+        <% if service.category == 1 || 2%> <%#javacsriptで切り替える部分%>
         <div class="service-contents">
           <span class="material-symbols-outlined">block</span>
           <input class="service-condition" name="service-condition" type="hidden" value=<% service.condition %>>
@@ -41,4 +52,4 @@
   </div>
 </div>
 
-<%= javascript_pack_tag 'services' %>
+<%#= javascript_pack_tag 'services' %>
