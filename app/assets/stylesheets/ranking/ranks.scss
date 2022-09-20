@@ -32,6 +32,7 @@
   display: flex;
   width: 100%;
   height: 500px;
+  border: double #000;
 }
 
 .priority {
@@ -53,6 +54,7 @@
 .secondary-rank-content {
   width: 100%;
   height: 50%;
+  border: double #000;
 }
 
 .sub-commendation {
@@ -60,8 +62,10 @@
   justify-content: space-between;
   width: 100%;
   height: 100px;
+  border: double #000;
   background-color: green;
 }
 
 .sub-rank-content {
+  border-right: double #000;
 }
