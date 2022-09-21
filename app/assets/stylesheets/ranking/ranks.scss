@@ -17,8 +17,15 @@
 /**ランキング分類ボタン**/
 .ranking-condition-menu {
   width: 30%;
-  padding: 30px;
+  padding: 50px;
   background-color: rgba(187, 149, 118, 0.2);
+}
+
+.rank-condition {
+  font-size: 18px;
+  color: rgb(50, 34, 34);
+  border: 3px double rgb(227, 237, 233);
+  box-shadow: 0px 5px 0px #678767;
 }
 
 /**ランキング内容表示領域**/
