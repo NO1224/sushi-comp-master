@@ -28,6 +28,7 @@
   padding: 30px;
 }
 
+/***表彰1位~3位***/
 .commendation {
   display: flex;
   width: 100%;
@@ -58,6 +59,7 @@
   border-bottom: double #000;
 }
 
+/***表彰4位~10位***/
 .sub-commendation {
   display: flex;
   justify-content: space-between;
