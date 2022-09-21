@@ -44,9 +44,16 @@
 }
 
 .priority {
+  position: relative;
   width: 60%;
   height: 100%;
   background-color: red;
+}
+
+.first-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .first-rank-content {
