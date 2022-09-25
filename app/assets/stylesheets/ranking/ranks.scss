@@ -43,6 +43,7 @@
   border: double #000;
 }
 
+/***表彰1位***/
 .priority {
   position: relative;
   width: 60%;
@@ -50,18 +51,21 @@
   background-color: red;
 }
 
+/***1位アイコン***/
 .icon {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
+/***2~3位アイコン***/
 .sub-icon {
   position: absolute;
   top: 260px;
   left: 10px;
 }
 
+/***4~10位アイコン***/
 .mini-icon {
   position: absolute;
   top: 5px;
@@ -72,6 +76,7 @@
   height: 100%;
 }
 
+/***表彰2位_3位***/
 .associate {
   position: relative;
   width: 40%;
