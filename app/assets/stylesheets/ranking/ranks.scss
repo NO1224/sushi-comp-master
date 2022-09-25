@@ -41,6 +41,7 @@
   width: 100%;
   height: 500px;
   border: double #000;
+  border-bottom: none;
 }
 
 /***表彰1位***/
@@ -48,7 +49,6 @@
   position: relative;
   width: 60%;
   height: 100%;
-  background-color: red;
 }
 
 /***1位アイコン***/
@@ -81,14 +81,13 @@
   position: relative;
   width: 40%;
   height: 100%;
-  background-color: blue;
 }
 
 .secondary-rank-content {
   width: 100%;
   height: 50%;
-  border-left: double #000;
-  border-bottom: double #000;
+  border-left: dotted #000;
+  border-bottom: dotted #000;
 }
 
 /***表彰4位~10位***/
@@ -98,10 +97,10 @@
   width:  100%;
   height: 100px;
   border: double #000;
-  background-color: green;
+  border-top: dotted #000;
 }
 
 .sub-rank-content {
   position: relative;
-  border-right: double #000;
+  border-right: dotted #000;
 }
