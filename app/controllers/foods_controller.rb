@@ -27,7 +27,7 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:sushi_neta_name,
                   :explanation,
                   :category_id,
-                  :season_month,
-                  :image)
+                  :image,
+                  season_month: [])
   end
 end
