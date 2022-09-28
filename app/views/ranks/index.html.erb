@@ -35,7 +35,9 @@
       <%#ランキング内容領域%>
       <div class="ranking-content-display">
         <div class="container">
+          <%%#表彰順位内%%>
           <div class="commendation">
+            <%%#1位%%>
             <div class="priority">
               <div class="icon">
                 <%= image_tag "f1-1.png", width: '50%', height: '50%' %>
@@ -44,6 +46,7 @@
                 <%= image_tag "dummy.png", width: '100%', height: '100%' %>
               </div>
             </div>
+            <%%#2~3位%%>
             <div class="associate">
               <div class="icon">
                 <%= image_tag "f1-2.png", width: '25%', height: '25%' %>
@@ -59,7 +62,9 @@
               </div>
             </div>
           </div>
+          <%%#無表彰ランキング範囲内%%>
           <div class="sub-commendation">
+            <%%#4~10位%%>
             <div class="sub-rank-content">
               <div class="mini-icon">
                 <%= image_tag "f1-4.png", width: '15%', height: '15%' %>
