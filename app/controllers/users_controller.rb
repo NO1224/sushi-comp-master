@@ -4,4 +4,5 @@ class UsersController < ApplicationController
     @information = Information.new
     @user = User.find(params[:id])
   end
+
 end
