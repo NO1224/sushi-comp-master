@@ -28,6 +28,6 @@ class FoodsController < ApplicationController
                   :explanation,
                   :category_id,
                   :image,
-                  :season_month: [])
+                  inseason_ids:[])
   end
 end
