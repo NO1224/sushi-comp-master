@@ -24,7 +24,8 @@ class FoodsController < ApplicationController
 
   private
   def food_params
-    params.require(:food).permit(:sushi_neta_name,
+    params.require(:food).permit(
+                  :sushi_neta_name,
                   :explanation,
                   :category_id,
                   :image,
