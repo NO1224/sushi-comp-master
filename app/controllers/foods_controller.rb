@@ -9,7 +9,12 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
+    @inseason_ids = params[:food][:inseason_ids]
     if @food.save
+      @inseason_ids.each do |inseason_id|
+        inseason=Season.find(inseason_id.to_i)
+        @food.inseasons << inseason #関連付ける
+      end
       redirect_to root_path
     else
       @user = current_user
@@ -28,7 +33,7 @@ class FoodsController < ApplicationController
                   :sushi_neta_name,
                   :explanation,
                   :category_id,
-                  :image,
-                  inseason_ids:[])
+                  :image)
+                  #{ inseason_ids:[] })
   end
 end
