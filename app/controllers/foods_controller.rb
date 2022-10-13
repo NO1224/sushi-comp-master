@@ -13,6 +13,7 @@ class FoodsController < ApplicationController
     if @food.save
       @inseason_ids.each do |inseason_id|
         inseason=Season.find(inseason_id.to_i)
+        
         @food.inseasons << inseason #関連付ける
       end
       redirect_to root_path
