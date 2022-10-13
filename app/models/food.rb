@@ -15,6 +15,7 @@ class Food < ApplicationRecord
     validates :sushi_neta_name
     validates :explanation
     validates :image
+    #validates :inseason_ids
   end
 
   #星評価の平均
