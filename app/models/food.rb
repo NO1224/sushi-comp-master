@@ -35,4 +35,17 @@ class Food < ApplicationRecord
       0.0
     end
   end
+
+  def inseasons_save(inseason_ids)
+    if self.inseasons != nil
+      food_inseasons_records = FoodInseason.where(food_id: self.id)
+      food_inseasons_records.destroy_all
+    end
+
+    inseason_ids.each do |inseason|
+      inspected_inseason = Inseason.where(season_month: inseason).first_or_create
+      self.inseasons << inspected_inseason
+    end
+
+  end
 end

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: :show
   resources :foods, only: [:index, :new, :create, :show] do
-    resources :inseasons, only: [:create]
     resources :comments, only: [:index, :new, :create]
   end
   resources :services, only: :index
