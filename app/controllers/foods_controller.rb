@@ -33,7 +33,7 @@ class FoodsController < ApplicationController
                   :sushi_neta_name,
                   :explanation,
                   :category_id,
-                  :image)
-                  #{ inseason_ids:[] })
+                  :image,
+                  {inseason_ids:[] })
   end
 end
