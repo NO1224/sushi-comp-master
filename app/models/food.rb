@@ -43,6 +43,7 @@ class Food < ApplicationRecord
     end
 
     inseason_ids.each do |inseason|
+      binding.pry
       inspected_inseason = Inseason.where(season_month: inseason).first_or_create
       self.inseasons << inspected_inseason
     end
