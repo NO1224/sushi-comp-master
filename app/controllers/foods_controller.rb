@@ -11,7 +11,9 @@ class FoodsController < ApplicationController
     #inseason_ids = params[:food][:inseason_ids].split(",") 
     #@food.inseasons_save(inseason_ids)
     if @food.save
-      food_params[:inseason_ids].each do |inseason_id|
+      @food_params = params[:inseason_ids]
+      binding.pry
+      @food_params.each do |inseason_id|
         #.pluck--カラムの値を配列として取り出すメソッド
         inseason=Season.find(inseason_id.to_i)
         @food.inseasons << inseason #関連付ける
@@ -34,7 +36,7 @@ class FoodsController < ApplicationController
                   :sushi_neta_name,
                   :explanation,
                   :category_id,
-                  :image,
-                  inseason_ids:[])
+                  :image)
+                  #inseason_ids:[])
   end
 end
