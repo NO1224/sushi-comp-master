@@ -15,7 +15,7 @@ class FoodsController < ApplicationController
       binding.pry
       @food_params.each do |inseason_id|
         #.pluck--カラムの値を配列として取り出すメソッド
-        inseason=Season.find(inseason_id.to_i)
+        inseason=Season.find(id: inseason_id.to_i)
         @food.inseasons << inseason #関連付ける
       end
       redirect_to root_path
